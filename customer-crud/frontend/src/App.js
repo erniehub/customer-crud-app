@@ -1,20 +1,29 @@
+import logo from './logo.svg';
+import './App.css';
 import React, { useState } from 'react';
 import CustomerList from './CustomerList';
 import CustomerForm from './CustomerForm';
 
-const App = () => {
-    const [selectedCustomer, setSelectedCustomer] = useState(null);
-
-    const handleCustomerSave = () => {
-        setSelectedCustomer(null); // Reset after save
-    };
-
-    return (
-        <div>
-            <CustomerList />
-            <CustomerForm customer={selectedCustomer} onSave={handleCustomerSave} />
-        </div>
-    );
-};
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+  
+}
 
 export default App;
